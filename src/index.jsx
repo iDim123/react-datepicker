@@ -199,6 +199,7 @@ export default class DatePicker extends React.Component {
     onClickOutside: PropTypes.func,
     onChangeRaw: PropTypes.func,
     onFocus: PropTypes.func,
+    showSelected: PropTypes.func,
     onInputClick: PropTypes.func,
     onKeyDown: PropTypes.func,
     onMonthChange: PropTypes.func,
@@ -948,6 +949,7 @@ export default class DatePicker extends React.Component {
         ref={(elem) => {
           this.calendar = elem;
         }}
+        handleShowSelectedClick={this.props.showSelected}
         locale={this.props.locale}
         calendarStartDay={this.props.calendarStartDay}
         chooseDayAriaLabelPrefix={this.props.chooseDayAriaLabelPrefix}
